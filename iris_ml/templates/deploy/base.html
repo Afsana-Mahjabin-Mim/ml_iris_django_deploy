@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Machine Learning</title>
+</head>
+<body>
+    <h1>Iris Machine Learning Project</h1>
+    
+    <div class="container">
+        <form method="post" action="">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="exampleInputValue">Sepal Length</label>
+          <input type="text" class="form-control" id="exampleInputValue" aria-describedby="Value1" placeholder="Enter Sepal Length Cm" name="SepalLengthCm">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputValue">Sepal Width</label>
+            <input type="text" class="form-control" id="exampleInputValue" aria-describedby="Value2" placeholder="Enter Sepal Width Cm" name="SepalWidthCm">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputValue">Petal Length</label>
+            <input type="text" class="form-control" id="exampleInputValue" aria-describedby="Value3" placeholder="Enter Petal Length Cm" name="PetalLengthCm">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputValue">Petal Width</label>
+            <input type="text" class="form-control" id="exampleInputValue" aria-describedby="Value4" placeholder="Enter Petal Width Cm" name="PetalWidthCm">
+        </div>
+
+        <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+      </div>
+      <div class="container">
+        <h3>
+        Result {{ result }}</h3>
+      </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</html>
