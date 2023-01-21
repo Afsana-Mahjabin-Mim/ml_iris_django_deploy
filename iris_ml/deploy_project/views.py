@@ -8,7 +8,7 @@ from pickle import load
 # Create your views here.
 
 def mlview(request):
-
+    result=''
     if request.method == "POST":
         SepalLengthCm = float(request.POST.get("SepalLengthCm"))
         SepalWidthCm = float(request.POST.get("SepalWidthCm"))
@@ -19,6 +19,6 @@ def mlview(request):
 
         result = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
 
-        print(result)
+        result=result[0]
 
     return render(request, "deploy/base.html",{'result':result})
